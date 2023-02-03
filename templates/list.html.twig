@@ -1,0 +1,82 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <style>
+        .grid-table {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-gap: 10px;
+        }
+
+        .grid-table .header {
+            font-weight: bold;
+        }
+
+        .grid-table .content .cell {
+            padding: 10px;
+        }
+    </style>
+
+    <h1>Transactions</h1>
+
+    <div class="grid-table">
+        <div class="header cell">ID</div>
+        <div class="header cell">Payment Method</div>
+        <div class="header cell">Transaction Type</div>
+        <div class="header cell">Timestamp</div>
+        <div class="header cell">Base Amount</div>
+        <div class="header cell">Base Currency</div>
+        <div class="header cell">Target Amount</div>
+        <div class="header cell">Target Currency</div>
+        <div class="header cell">Exchange Rate</div>
+        <div class="header cell">IP Address</div>
+    </div>
+    <div class="grid-table" id="list">
+
+    </div>
+
+    <div id="loadMore"></div>
+
+
+    <script>
+        var list = document.getElementById("list");
+        var loadMore = document.getElementById("loadMore");
+
+
+        function fetchNew(page = 1) {
+            var url = 'http://localhost:8088/api/transaction?page=' + page;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    data.items.forEach(transaction => {
+                        list.innerHTML = list.innerHTML + `
+              <div class='column'>${transaction.id}</div>
+              <div class='column'>${transaction.paymentMethod}</div>
+              <div class='column'>${transaction.transactionType}</div>
+              <div class='column'>${transaction.timestamp}</div>
+              <div class='column'>${transaction.baseAmount}</div>
+              <div class='column'>${transaction.baseCurrency}</div>
+              <div class='column'>${transaction.targetAmount}</div>
+              <div class='column'><a href='/edit/${transaction.id}'>${transaction.targetCurrency}</a></div>
+              <div class='column'>${transaction.exchangeRate}</div>
+              <div class='column'>${transaction.refererIp}</div>
+               `;
+                    });
+
+                    let next = data.fullCount > (data.page * data.pageSize);
+
+                    if (next) {
+                        loadMore.innerHTML = "<a href='#''>LOAD MORE</a>";
+                        loadMore.addEventListener('click', function () {
+                            fetchNew(data.page + 1);
+                        })
+                    } else {
+                        loadMore.innerHTML = "";
+                    }
+                });
+        }
+
+        fetchNew();
+
+    </script>
+{% endblock %}

@@ -1,0 +1,18 @@
+App\Entity\Transaction:
+  properties:
+    transactionType:
+      - Type: App\ValueObject\TransactionType
+      - NotNull: ~
+    paymentMethod:
+      - Type: App\ValueObject\PaymentMethod
+      - NotNull: ~
+    baseAmount:
+      - NotNull: ~
+    baseCurrency:
+      - NotNull: ~
+      - Currency: ~
+    targetCurrency:
+      - NotNull: ~
+      - Currency: ~
+    refererIp:
+      - NotNull: ~
