@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controller\Api;
 
 use App\Entity\Transaction;
-use App\Service\ExchangeTransactionProcessorInterface;
+use App\Transaction\ExchangeTransactionProcessorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +27,7 @@ class PostExchangeTransactionController extends AbstractController
         $errors = $this->validator->validate($transaction);
 
         if (count($errors) > 0) {
-            return new JsonResponse(null,Response::HTTP_BAD_REQUEST);
+            return new JsonResponse(['errors' => (string)$errors],Response::HTTP_BAD_REQUEST);
         }
         $this->exchangeTransactionProcessor->process($transaction);
 

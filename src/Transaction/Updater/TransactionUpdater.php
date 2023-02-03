@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Updater;
+namespace App\Transaction\Updater;
 
 use App\Entity\Transaction;
 

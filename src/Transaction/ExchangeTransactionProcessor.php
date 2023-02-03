@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Transaction;
 
 use App\Entity\Transaction;
-use App\ExchangeRates\Client\Exception\ExchangeRatesClientException;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
-use App\ExchangeRates\Provider\ExchangeRateProviderInterface;
 use App\Repository\TransactionRepositoryInterface;
+use App\Transaction\ExchangeRates\Client\Exception\ExchangeRatesClientException;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
+use App\Transaction\ExchangeRates\Provider\ExchangeRateProviderInterface;
 
 readonly class ExchangeTransactionProcessor implements ExchangeTransactionProcessorInterface
 {

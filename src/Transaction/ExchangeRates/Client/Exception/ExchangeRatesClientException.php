@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRates\Client\Exception;
+namespace App\Transaction\ExchangeRates\Client\Exception;
 
 class ExchangeRatesClientException extends \Exception
 {

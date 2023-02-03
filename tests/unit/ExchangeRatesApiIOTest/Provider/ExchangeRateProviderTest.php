@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Tests\ExchangeRatesApiIOTest\Provider;
 
-use App\ExchangeRates\Client\Exception\ExchangeRatesClientException;
-use App\ExchangeRates\Client\ExchangeRatesClientInterface;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
-use App\ExchangeRatesApiIO\Provider\ExchangeRateProvider;
+use App\Transaction\ExchangeRates\Client\Exception\ExchangeRatesClientException;
+use App\Transaction\ExchangeRates\Client\ExchangeRatesClientInterface;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
+use App\Transaction\ExchangeRatesApiIO\Provider\ExchangeRateProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;

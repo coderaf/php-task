@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRatesApiIO\Client;
+namespace App\Transaction\ExchangeRatesApiIO\Client;
 
-use App\ExchangeRates\Client\Exception\ExchangeRatesClientException;
-use App\ExchangeRates\Client\ExchangeRatesClientInterface;
-use App\ExchangeRates\Client\UrlGeneratorInterface;
 use App\Logs\DebugClientRequestTrait;
 use App\Request\UuidUniqueIdProvider;
+use App\Transaction\ExchangeRates\Client\Exception\ExchangeRatesClientException;
+use App\Transaction\ExchangeRates\Client\ExchangeRatesClientInterface;
+use App\Transaction\ExchangeRates\Client\UrlGeneratorInterface;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\ExchangeRatesApiIOTest\Client;
 
-use App\ExchangeRatesApiIO\Client\ExchangeRatesApiIOUrlGenerator;
+use App\Transaction\ExchangeRatesApiIO\Client\ExchangeRatesApiIOUrlGenerator;
 use PHPUnit\Framework\TestCase;
 
 class ExchangeRatesApiIOUrlGeneratorTest extends TestCase

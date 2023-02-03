@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRates\Provider\Exception;
+namespace App\Transaction\ExchangeRates\Provider\Exception;
 
 class ExchangeRateProviderMissingRatesException extends \Exception
 {

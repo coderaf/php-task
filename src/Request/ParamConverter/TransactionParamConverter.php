@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Request\ParamConverter;
 
-use App\Builder\TransactionBuilderInterface;
 use App\Repository\TransactionRepositoryInterface;
+use App\Transaction\Builder\TransactionBuilderInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use Symfony\Component\HttpFoundation\Request;

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRates\Provider;
+namespace App\Transaction\ExchangeRates\Provider;
 
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
 
 interface ExchangeRateProviderInterface
 {

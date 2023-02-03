@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRatesApiIO\Client;
+namespace App\Transaction\ExchangeRatesApiIO\Client;
 
-use App\ExchangeRates\Client\UrlGeneratorInterface;
+use App\Transaction\ExchangeRates\Client\UrlGeneratorInterface;
 
 readonly class ExchangeRatesApiIOUrlGenerator implements UrlGeneratorInterface
 {

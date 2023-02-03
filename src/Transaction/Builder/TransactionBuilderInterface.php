@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Builder;
+namespace App\Transaction\Builder;
 
 use App\Entity\Transaction;
 

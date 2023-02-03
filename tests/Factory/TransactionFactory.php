@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Factory;
+namespace App\Tests\Factory;
 
 use App\Entity\Transaction;
 use App\Repository\TransactionRepository;
 use App\ValueObject\PaymentMethod;
 use App\ValueObject\TransactionType;
-use Faker\Core\Uuid;
 use Zenstruck\Foundry\ModelFactory;
 use Zenstruck\Foundry\Proxy;
 use Zenstruck\Foundry\RepositoryProxy;

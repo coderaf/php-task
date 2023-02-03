@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRatesApiIO\Provider;
+namespace App\Transaction\ExchangeRatesApiIO\Provider;
 
-use App\ExchangeRates\Client\Exception\ExchangeRatesClientException;
-use App\ExchangeRates\Client\ExchangeRatesClientInterface;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
-use App\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
-use App\ExchangeRates\Provider\ExchangeRateProviderInterface;
+use App\Transaction\ExchangeRates\Client\Exception\ExchangeRatesClientException;
+use App\Transaction\ExchangeRates\Client\ExchangeRatesClientInterface;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderException;
+use App\Transaction\ExchangeRates\Provider\Exception\ExchangeRateProviderMissingRatesException;
+use App\Transaction\ExchangeRates\Provider\ExchangeRateProviderInterface;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;

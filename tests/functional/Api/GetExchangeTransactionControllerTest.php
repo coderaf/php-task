@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\functional\Api;
 
-use App\Factory\TransactionFactory;
+use App\Tests\Factory\TransactionFactory;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

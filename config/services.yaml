@@ -31,6 +31,6 @@ services:
     GuzzleHttp\ClientInterface:
         class: GuzzleHttp\Client
 
-    App\ExchangeRatesApiIO\Client\ExchangeRatesApiIOClient:
+    App\Transaction\ExchangeRatesApiIO\Client\ExchangeRatesApiIOClient:
         calls:
             - setLogger: ['@monolog.logger']

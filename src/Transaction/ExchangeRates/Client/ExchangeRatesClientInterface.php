@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ExchangeRates\Client;
+namespace App\Transaction\ExchangeRates\Client;
 
-use App\ExchangeRates\Client\Exception\ExchangeRatesClientException;
+use App\Transaction\ExchangeRates\Client\Exception\ExchangeRatesClientException;
 use Psr\Http\Message\ResponseInterface;
 
 interface ExchangeRatesClientInterface

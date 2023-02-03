@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Builder;
+namespace App\Transaction\Builder;
 
 use App\Entity\Transaction;
 use App\Request\RefererIpProviderInterface;
-use App\Service\MoneyAmountFormatter;
+use App\Transaction\MoneyAmountFormatter;
 use App\ValueObject\PaymentMethod;
 use App\ValueObject\TransactionType;
 use Symfony\Component\Uid\Uuid;

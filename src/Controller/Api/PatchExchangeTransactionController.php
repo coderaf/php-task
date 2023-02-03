@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controller\Api;
 
 use App\Entity\Transaction;
-use App\Service\ExchangeTransactionProcessorInterface;
-use App\Updater\TransactionUpdaterInterface;
+use App\Transaction\ExchangeTransactionProcessorInterface;
+use App\Transaction\Updater\TransactionUpdaterInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

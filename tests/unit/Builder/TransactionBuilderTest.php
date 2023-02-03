@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Tests\Builder;
 
-use App\Builder\TransactionBuilder;
 use App\Entity\Transaction;
 use App\Request\RefererIpProviderInterface;
+use App\Transaction\Builder\TransactionBuilder;
 use App\ValueObject\PaymentMethod;
 use App\ValueObject\TransactionType;
 use PHPUnit\Framework\MockObject\MockObject;
